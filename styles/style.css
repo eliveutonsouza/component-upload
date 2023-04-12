@@ -1,0 +1,213 @@
+/* RESET DO SITE */
+
+:root {
+  --bg-color: #fbfaff;
+
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+
+  height: 100vh;
+
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  width: 44rem;
+  margin-inline: 1.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#drop_zone {
+  height: 16rem;
+
+  background: #f3f0ff;
+  border: 1px dashed #c1b2fa;
+  border-radius: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#drop_zone p {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 130%;
+  color: #7a5fec;
+}
+
+#drop_zone span {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: #746e82;
+}
+
+.card-file {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  height: 72px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 16px #eae2fd;
+  border-radius: 8px;
+}
+
+.icon-file {
+  width: 4.8rem;
+  height: 100%;
+
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Se for selecionado progress a cor será roxo */
+.card-file.progress .icon-file {
+  background: #e9e3f8;
+}
+
+.card-file.progress .icon-file svg path {
+  fill: #ac96e4;
+}
+
+/* Se for selecionado progress a cor será verde */
+.card-file.success .icon-file {
+  background: #daf2d9;
+}
+
+.card-file.success .icon-file svg path {
+  fill: #73b172;
+}
+
+/* Se for selecionado progress a cor será vermelho */
+.card-file.error .icon-file {
+  background: #f2d9d9;
+}
+
+.card-file.error .icon-file svg path {
+  fill: #e36363;
+}
+
+.progress-bar {
+  width: 32.4rem;
+  height: 0.8rem;
+
+  background: #e3e3ed;
+  border-radius: 999px;
+}
+
+.progress-status {
+  width: 157px;
+  height: 0.8rem;
+  border-radius: 999px;
+}
+
+.card-file.progress .progress-status {
+  background: linear-gradient(90deg, rgba(58, 97, 237, 0.52) 0%, #7c3aed 100%);
+}
+
+.card-file.success .progress-status {
+  background: #73b172;
+}
+
+.info-card-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.info-upload p {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+
+  color: #575361;
+}
+
+.info-upload span {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+
+  color: #857e95;
+}
+
+.card-file .status-upload {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-file button {
+  display: flex;
+  align-self: self-start;
+}
+
+.card-file.success button {
+  display: none;
+}
+
+.card-file .status-upload span {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+
+  color: #9892a6;
+}
+
+.card-file.success .status-upload span {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+
+  color: #73b172;
+}
+
+.card-file.error .status-upload span {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+
+  color: #e36363;
+}
